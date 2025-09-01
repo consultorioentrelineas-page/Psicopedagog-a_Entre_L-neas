@@ -242,11 +242,12 @@
       const details = encodeURIComponent('Nombre: '+decodeURIComponent(nombre)+'\nCorreo: '+decodeURIComponent(correo)+'\nTeléfono: '+decodeURIComponent(telefono));
       const url = `https://calendar.google.com/calendar/u/0/r/eventedit?text=${title}&dates=${start}/${start}&details=${details}`;
       window.open(url,'_blank');
-      return true; // permite que también se envíe el form a FormSubmit
+       // permite que también se envíe el form a FormSubmit
     }
   </script>
 </body>
 </html>
+
 
 
 
