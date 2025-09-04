@@ -116,6 +116,7 @@
             <!-- Opcionales de FormSubmit -->
             <input type="hidden" name="_subject" value="Nueva cita reservada en Psicopedagogía Entre Líneas">
             <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="">
 
             <button class="btn" type="submit">Agendar cita</button>
           </form>
@@ -148,21 +149,10 @@
     const form = document.getElementById('formulario');
     const gracias = document.getElementById('gracias');
 
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form)
-      }).then(() => {
-        form.style.display = 'none';   // Oculta el formulario
-        gracias.style.display = 'block'; // Muestra el mensaje
-      }).catch(() => {
-        alert("Hubo un error, inténtalo de nuevo.");
-      });
-    });
   </script>
 </body>
 </html>
+
 
 
 
