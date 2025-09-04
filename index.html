@@ -92,7 +92,7 @@
       <p>Escríbenos o llámanos. Agenda tu cita en la fecha y hora que prefieras.</p>
       <div class="contact" style="margin-top:16px">
         <div class="card">
-          <form action="https://formsubmit.co/Ni.valeria2021@gmail.com" method="POST" id="formulario">
+          <form action="https://formsubmit.co/Ni.valeria2021@gmail.com" method="POST">
             <label>Nombre:<br><input type="text" name="nombre" required></label><br>
             <label>Correo:<br><input type="email" name="correo" required></label><br>
             <label>Teléfono:<br><input type="tel" name="telefono"></label><br>
@@ -116,15 +116,10 @@
             <!-- Opcionales de FormSubmit -->
             <input type="hidden" name="_subject" value="Nueva cita reservada en Psicopedagogía Entre Líneas">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="">
+
 
             <button class="btn" type="submit">Agendar cita</button>
           </form>
-
-          <!-- Mensaje oculto de confirmación -->
-          <div id="gracias" style="display:none; margin-top:20px; color:green; font-weight:bold;">
-            ✅ ¡Gracias por agendar tu cita! Te contactaremos pronto.
-          </div>
         </div>
         <div class="card">
           <h3>Datos de contacto</h3>
@@ -144,14 +139,11 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Script para manejar el mensaje de "gracias"
-    const form = document.getElementById('formulario');
-    const gracias = document.getElementById('gracias');
-
   </script>
 </body>
 </html>
+
+
 
 
 
