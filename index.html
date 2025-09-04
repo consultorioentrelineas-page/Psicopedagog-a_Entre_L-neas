@@ -50,6 +50,16 @@
     input, textarea, select{
       width:100%; padding:10px; margin:6px 0 14px; border-radius:10px; border:1px solid #cbd5e1;
     }
+    .success-message{
+      display:none;
+      padding:15px;
+      margin-top:10px;
+      border-radius:10px;
+      background:var(--ok);
+      color:white;
+      font-weight:600;
+      text-align:center;
+    }
   </style>
 </head>
 <body>
@@ -92,7 +102,7 @@
       <p>Escríbenos o llámanos. Agenda tu cita en la fecha y hora que prefieras.</p>
       <div class="contact" style="margin-top:16px">
         <div class="card">
-          <form action="https://formsubmit.co/Ni.valeria2021@gmail.com" method="POST">
+          <form id="citaForm" action="https://formsubmit.co/ajax/Ni.valeria2021@gmail.com" method="POST">
             <label>Nombre:<br><input type="text" name="nombre" required></label><br>
             <label>Correo:<br><input type="email" name="correo" required></label><br>
             <label>Teléfono:<br><input type="tel" name="telefono"></label><br>
@@ -117,9 +127,11 @@
             <input type="hidden" name="_subject" value="Nueva cita reservada en Psicopedagogía Entre Líneas">
             <input type="hidden" name="_captcha" value="false">
 
-
             <button class="btn" type="submit">Agendar cita</button>
           </form>
+          <div id="successMessage" class="success-message">
+            ✅ Tu cita fue enviada con éxito. Redirigiendo...
+          </div>
         </div>
         <div class="card">
           <h3>Datos de contacto</h3>
@@ -139,6 +151,34 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Capturamos envío del formulario con AJAX
+    const form = document.getElementById('citaForm');
+    const successMsg = document.getElementById('successMessage');
+
+    form.addEventListener('submit', async function(e){
+      e.preventDefault(); // Evita redirección por defecto
+
+      const formData = new FormData(form);
+      try {
+        await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        form.style.display = 'none'; // Oculta el formulario
+        successMsg.style.display = 'block'; // Muestra mensaje de éxito
+
+        // 🔥 Redirige a tu página de GitHub después de 3s
+        setTimeout(() => {
+          window.location.href = "https://consultorioentrelineas-page.github.io/Psicopedagog-a_Entre_L-neas/";
+        }, 3000);
+
+      } catch (error) {
+        alert("Hubo un error al enviar tu cita. Inténtalo nuevamente.");
+      }
+    });
   </script>
 </body>
 </html>
