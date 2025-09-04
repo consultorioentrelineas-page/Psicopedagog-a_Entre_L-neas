@@ -3,63 +3,56 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> Psicopedagogía Entre líneas | Atención integral para el aprendizaje</title>
+  <title>Psicopedagogía Entre líneas | Atención integral para el aprendizaje</title>
   <meta name="description" content="Psicopedagogía integral: evaluación, diagnóstico, intervención, acompañamiento escolar, talleres y orientación para familias. Atendemos niños, adolescentes y adultos." />
   <style>
     :root{
-      --bg:#f0f9ff;
-      --card:#ffffff;
-      --soft:#e0f2fe;
-      --text:#1e293b;
-      --muted:#475569;
-      --brand:#22d3ee;
-      --brand2:#a78bfa;
-      --ok:#34d399;
-      --warn:#f59e0b;
-      --shadow: 0 6px 20px rgba(0,0,0,.15);
-      --radius: 18px;
+      --bg:#f0f9ff; --card:#ffffff; --soft:#e0f2fe; --text:#1e293b; --muted:#475569;
+      --brand:#22d3ee; --brand2:#a78bfa; --ok:#34d399; --warn:#f59e0b;
+      --shadow: 0 6px 20px rgba(0,0,0,.15); --radius: 18px;
     }
     *{box-sizing:border-box}
-    body{
-      margin:0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      color:var(--text); background:linear-gradient(180deg,#f0f9ff 0%, #e0f2fe 100%);
-    }
+    body{margin:0; font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color:var(--text); background:linear-gradient(180deg,#f0f9ff 0%, #e0f2fe 100%);}
     a{color:inherit; text-decoration:none}
-    .container{max-width:1200px; margin:0 auto; padding: 28px}
-    header{position:sticky; top:0; backdrop-filter: blur(8px); background:rgba(255,255,255,.9); z-index:10; border-bottom:1px solid rgba(148,163,184,.3)}
+    .container{max-width:1200px; margin:0 auto; padding:28px}
+    header{position:sticky; top:0; backdrop-filter:blur(8px); background:rgba(255,255,255,.9);
+      z-index:10; border-bottom:1px solid rgba(148,163,184,.3)}
     nav{display:flex; align-items:center; justify-content:space-between}
-    .logo{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.3px; font-size:20px; color:#0e7490}
-    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 20px; border-radius:999px; background:linear-gradient(135deg, var(--brand), var(--brand2)); color:white; font-weight:700; box-shadow:var(--shadow); border:0; cursor:pointer; transition:all .2s ease}
+    .logo{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.3px;
+      font-size:20px; color:#0e7490}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 20px;
+      border-radius:999px; background:linear-gradient(135deg, var(--brand), var(--brand2));
+      color:white; font-weight:700; box-shadow:var(--shadow); border:0; cursor:pointer;
+      transition:all .2s ease}
     .btn:hover{transform:translateY(-2px); filter:brightness(1.1)}
     .ghost{background:transparent; color:var(--text); border:2px solid var(--brand)}
-    .hero{display:grid; grid-template-columns:1fr 1fr; gap:28px; padding: 60px 0; align-items:center}
-    .card{background:var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding:30px}
-    h1{font-size: clamp(32px, 5vw, 54px); line-height:1.1; margin: 0 0 14px; background:linear-gradient(135deg,var(--brand),var(--brand2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent}
-    .lead{font-size: clamp(17px, 2.5vw, 20px); color:var(--muted)}
-    .section{margin: 50px 0 20px}
-    .section h2{font-size: clamp(26px, 3.5vw, 36px); margin:0 0 10px; color:#0e7490}
+    .hero{display:grid; grid-template-columns:1fr 1fr; gap:28px; padding:60px 0;
+      align-items:center}
+    .card{background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+      padding:30px}
+    h1{font-size:clamp(32px,5vw,54px); line-height:1.1; margin:0 0 14px;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent}
+    .lead{font-size:clamp(17px,2.5vw,20px); color:var(--muted)}
+    .section{margin:50px 0 20px}
+    .section h2{font-size:clamp(26px,3.5vw,36px); margin:0 0 10px; color:#0e7490}
     .section p{margin:0; color:var(--muted)}
-    .service{padding:20px; border-radius:16px; background:#f9fafb; border:1px solid #cbd5e1; transition:all .2s ease; cursor:pointer;}
+    .service{padding:20px; border-radius:16px; background:#f9fafb; border:1px solid #cbd5e1;
+      transition:all .2s ease; cursor:pointer;}
     .service:hover{transform:translateY(-4px); background:#ecfeff}
     .service h3{margin:0; font-size:18px; color:#0284c7}
     .service p{margin:10px 0 0; color:var(--muted); font-size:14px}
-    .contact{display:grid; grid-template-columns: 1fr 1fr; gap:20px}
-    @media (max-width: 980px){ .hero{grid-template-columns:1fr} .contact{grid-template-columns:1fr} }
-    footer{margin-top:50px; padding: 30px 0; border-top:1px solid rgba(148,163,184,.3); color:var(--muted); font-size:14px; text-align:center; background:#f1f5f9}
-    img{max-width:100%; border-radius: var(--radius)}
-    input, textarea, select{
-      width:100%; padding:10px; margin:6px 0 14px; border-radius:10px; border:1px solid #cbd5e1;
-    }
-    .success-message{
-      display:none;
-      padding:15px;
-      margin-top:10px;
-      border-radius:10px;
-      background:var(--ok);
-      color:white;
-      font-weight:600;
-      text-align:center;
-    }
+    .contact{display:grid; grid-template-columns:1fr 1fr; gap:20px}
+    @media (max-width:980px){.hero{grid-template-columns:1fr} .contact{grid-template-columns:1fr}}
+    footer{margin-top:50px; padding:30px 0; border-top:1px solid rgba(148,163,184,.3);
+      color:var(--muted); font-size:14px; text-align:center; background:#f1f5f9}
+    img{max-width:100%; border-radius:var(--radius)}
+    input, textarea, select{width:100%; padding:10px; margin:6px 0 14px;
+      border-radius:10px; border:1px solid #cbd5e1;}
+    .success-message{display:none; padding:15px; margin-top:10px;
+      border-radius:10px; background:var(--ok); color:white;
+      font-weight:600; text-align:center;}
   </style>
 </head>
 <body>
@@ -96,13 +89,13 @@
       </div>
     </section>
 
-    <!-- SECCIÓN DE CONTACTO Y FORMULARIO -->
+    <!-- Contacto -->
     <section id="contacto" class="section">
       <h2>Contacto</h2>
       <p>Escríbenos o llámanos. Agenda tu cita en la fecha y hora que prefieras.</p>
       <div class="contact" style="margin-top:16px">
         <div class="card">
-          <form id="citaForm" action="https://formsubmit.co/ajax/Ni.valeria2021@gmail.com" method="POST">
+          <form id="citaForm" action="https://script.google.com/macros/s/AKfycby9yw6_fY3Y4vaOfNMZX1IIKYYRu6gRt03yqqWQwxr1Yxniq0BIpRXH0jDIif37vxXs4A/exec" method="POST">
             <label>Nombre:<br><input type="text" name="nombre" required></label><br>
             <label>Correo:<br><input type="email" name="correo" required></label><br>
             <label>Teléfono:<br><input type="tel" name="telefono"></label><br>
@@ -122,66 +115,58 @@
               </select>
             </label><br>
             <label>Motivo:<br><textarea name="mensaje" required></textarea></label><br>
-
-            <!-- Opcionales de FormSubmit -->
-            <input type="hidden" name="_subject" value="Nueva cita reservada en Psicopedagogía Entre Líneas">
-            <input type="hidden" name="_captcha" value="false">
-
             <button class="btn" type="submit">Agendar cita</button>
           </form>
-          <div id="successMessage" class="success-message">
-            ✅ Tu cita fue enviada con éxito. Redirigiendo...
-          </div>
+          <div id="successMessage" class="success-message">✅ Tu cita fue enviada con éxito. Redirigiendo...</div>
+          <div id="errorMessage" class="success-message" style="background:var(--warn); color:black;">❌ Esta hora ya fue reservada. Por favor selecciona otra.</div>
         </div>
         <div class="card">
           <h3>Datos de contacto</h3>
           <p><b>Correo:</b> <a href="mailto:Ni.valeria2021@gmail.com">Ni.valeria2021@gmail.com</a></p>
           <p><b>Teléfono:</b> <a href="tel:+50684829511">84829511</a></p>
-          <p><b>Instagram:</b> <a href="https://www.instagram.com/psicopedagogia_entre_lineas/?utm_source=qr&igsh=ZGdzYTl3eHczbDR6#"> Psicopedagogia_Entre_Lineas</a></p>
-          <p><b>Facebook:</b> <a href="https://www.facebook.com/share/16oiwdzcWm/"> Psicopedagogia_Entre_Lineas</a></p>
+          <p><b>Instagram:</b> <a href="https://www.instagram.com/psicopedagogia_entre_lineas/?utm_source=qr&igsh=ZGdzYTl3eHczbDR6#">Psicopedagogia_Entre_Lineas</a></p>
+          <p><b>Facebook:</b> <a href="https://www.facebook.com/share/16oiwdzcWm/">Psicopedagogia_Entre_Lineas</a></p>
           <p><b>Modalidad:</b> Presencial y en línea</p>
         </div>
       </div>
     </section>
 
-    <footer class="container">
-      <p>© <span id="year"></span> Psicopedagogía Entre Líneas. Todos los derechos reservados.</p>
-    </footer>
+    <footer class="container"><p>© <span id="year"></span> Psicopedagogía Entre Líneas. Todos los derechos reservados.</p></footer>
   </main>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Capturamos envío del formulario con AJAX
     const form = document.getElementById('citaForm');
     const successMsg = document.getElementById('successMessage');
+    const errorMsg = document.getElementById('errorMessage');
 
-    form.addEventListener('submit', async function(e){
-      e.preventDefault(); // Evita redirección por defecto
-
-      const formData = new FormData(form);
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
       try {
-        await fetch(form.action, {
+        const res = await fetch(form.action, {
           method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
+          body: JSON.stringify(data),
+          headers: { 'Content-Type': 'application/json' }
         });
-
-        form.style.display = 'none'; // Oculta el formulario
-        successMsg.style.display = 'block'; // Muestra mensaje de éxito
-
-        // 🔥 Redirige a tu página de GitHub después de 3s
-        setTimeout(() => {
-          window.location.href = "https://consultorioentrelineas-page.github.io/Psicopedagog-a_Entre_L-neas/";
-        }, 3000);
-
-      } catch (error) {
-        alert("Hubo un error al enviar tu cita. Inténtalo nuevamente.");
+        const result = await res.json();
+        if (result.status === "ocupado") {
+          errorMsg.style.display = 'block';
+        } else {
+          form.style.display = 'none';
+          successMsg.style.display = 'block';
+          setTimeout(() => {
+            window.location.href = "https://consultorioentrelineas-page.github.io/Psicopedagog-a_Entre_L-neas/";
+          }, 3000);
+        }
+      } catch {
+        alert("⚠️ Error al enviar la cita. Inténtalo más tarde.");
       }
     });
   </script>
 </body>
 </html>
+
 
 
 
